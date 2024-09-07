@@ -17,7 +17,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.feldsherov = import ./home.nix;
+            home-manager.users.feldsherov = import ./users/feldsherov.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
