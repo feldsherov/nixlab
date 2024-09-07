@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hosts/newt/hardware-configuration.nix
+      ./hardware-configuration.nix
     ];
 
   # Bootloader.
