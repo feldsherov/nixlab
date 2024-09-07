@@ -42,21 +42,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    xkb = {
-      layout = "us,en";
-      variant = "";
-      options = "grp:win_space_toggle";
-    };
-  };
-  services.libinput = {
-      enable = true;
-      touchpad = {
-        naturalScrolling = true;
-      };
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.feldsherov = {
     isNormalUser = true;
