@@ -1,6 +1,14 @@
 { config, pkgs, ... }:
 
-{
+let
+  tex = (pkgs.texlive.combine {
+    inherit (pkgs.texlive) scheme-medium
+      dvisvgm dvipng # for preview and export as html
+      wrapfig amsmath ulem hyperref capt-of;
+      #(setq org-latex-compiler "lualatex")
+      #(setq org-preview-latex-default-process 'dvisvgm)
+  });
+in {
   home.username = "feldsherov";
   home.homeDirectory = "/home/feldsherov";
 
@@ -14,10 +22,11 @@
   # changes in each release.
   home.stateVersion = "24.05";
 
-  home.packages = [
-    pkgs.vscode
-    pkgs.gimp
-    pkgs.obsidian
+  home.packages = with pkgs; [
+    vscode
+    gimp
+    obsidian
+    tex
   ];
 
   # Let Home Manager install and manage itself.
