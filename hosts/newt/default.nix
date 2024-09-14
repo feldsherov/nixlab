@@ -64,6 +64,7 @@
     waybar
     git
     rofi
+    hyprlock
   ];
 
   # Set vim as default editor.
