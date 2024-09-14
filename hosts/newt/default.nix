@@ -61,6 +61,7 @@
     sway
     firefox
     alacritty
+    waybar
     git
   ];
 
