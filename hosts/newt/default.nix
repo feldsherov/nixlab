@@ -64,20 +64,19 @@
     git
   ];
 
-  fonts.packages = with pkgs; [
-    helvetica-neue-lt-std
-  ];
-
   # Set vim as default editor.
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
 
+  # Enable hyprland.
   programs.hyprland = {
     # Install the packages from nixpkgs
     enable = true;
     # Whether to enable XWayland
     xwayland.enable = true;
   };
+
+  programs.waybar.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
