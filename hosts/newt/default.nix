@@ -63,6 +63,7 @@
     alacritty
     waybar
     git
+    rofi
   ];
 
   # Set vim as default editor.
