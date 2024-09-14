@@ -60,6 +60,7 @@
     vim 
     sway
     firefox
+    alacritty
     git
   ];
 
