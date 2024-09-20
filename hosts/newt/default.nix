@@ -59,12 +59,9 @@
   environment.systemPackages = with pkgs; [
     vim 
     sway
+    swaylock
     firefox
-    alacritty
-    waybar
     git
-    rofi
-    hyprlock
   ];
 
   # Set vim as default editor.
