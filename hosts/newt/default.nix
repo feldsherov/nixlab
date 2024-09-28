@@ -66,6 +66,9 @@
     grim
     slurp
     wl-clipboard
+    flex
+    python3
+    bison
   ];
 
   # Set vim as default editor.
