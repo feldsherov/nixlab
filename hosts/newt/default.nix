@@ -63,6 +63,9 @@
     firefox
     git
     htop
+    grim
+    slurp
+    wl-clipboard
   ];
 
   # Set vim as default editor.
