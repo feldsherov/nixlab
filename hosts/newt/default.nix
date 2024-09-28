@@ -62,6 +62,7 @@
     swaylock-effects
     firefox
     git
+    htop
   ];
 
   # Set vim as default editor.
