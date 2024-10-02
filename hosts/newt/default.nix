@@ -107,11 +107,6 @@
 
   services.gnome.gnome-keyring.enable=true;
 
-  programs.sway = {
-    enable = true;
-    # wrapersFeatures.gtk = true;
-  };
-
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

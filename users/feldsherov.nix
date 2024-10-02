@@ -23,7 +23,7 @@ in {
   home.stateVersion = "24.05";
 
   imports = [
-    ../modules/sway.nix
+    ../modules/sway/default.nix
   ];
 
   home.packages = with pkgs; [
@@ -36,3 +36,4 @@ in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
+
