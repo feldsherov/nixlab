@@ -58,13 +58,9 @@
   # System wide packages
   environment.systemPackages = with pkgs; [
     vim 
-    swaylock-effects
     firefox
     git
     htop
-    grim
-    slurp
-    wl-clipboard
     flex
     python3
     bison

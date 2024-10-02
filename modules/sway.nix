@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
-     sway
+    swaylock-effects
+    sway
+    grim
+    slurp
+    wl-clipboard
   ];
 }
