@@ -22,6 +22,10 @@ in {
   # changes in each release.
   home.stateVersion = "24.05";
 
+  imports = [
+    ../modules/sway.nix
+  ];
+
   home.packages = with pkgs; [
     vscode
     gimp

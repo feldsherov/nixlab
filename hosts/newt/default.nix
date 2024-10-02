@@ -58,7 +58,6 @@
   # System wide packages
   environment.systemPackages = with pkgs; [
     vim 
-    sway
     swaylock-effects
     firefox
     git
