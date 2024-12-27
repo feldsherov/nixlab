@@ -149,6 +149,7 @@
   };
 
   home.packages = with pkgs; [
+    i3status
     swaylock-effects
     sway
     grim
