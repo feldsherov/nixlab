@@ -5,7 +5,7 @@
       config = rec {
         modifier = "Mod4";
         terminal = "foot"; 
-	# menu = "${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
+	menu = "${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
         input = {
            "type:keyboard" = {
              xkb_layout = "us,ru";
