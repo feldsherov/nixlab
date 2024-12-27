@@ -89,7 +89,7 @@
           "${modifier}+minus" = "scratchpad show";
 
           "${modifier}+Shift+c" = "reload";
-          "${modifier}+Shift+e" = "exec exit sway";
+          "${modifier}+Shift+e" = "exec sway exit";
 
           "${modifier}+r" = "mode resize";
           "${modifier}+z" = "exec swaylock " +

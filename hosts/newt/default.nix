@@ -94,6 +94,7 @@
   # services.openssh.enable = true;
 
   security.polkit.enable = true;
+  hardware.graphics.enable = true;
 
   services.gnome.gnome-keyring.enable=true;
 
