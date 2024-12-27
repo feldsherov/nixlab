@@ -5,7 +5,7 @@
       config = rec {
         modifier = "Mod4";
         terminal = "foot"; 
-	menu = "${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
+	# menu = "${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
         input = {
            "type:keyboard" = {
              xkb_layout = "us,ru";
@@ -89,8 +89,7 @@
           "${modifier}+minus" = "scratchpad show";
 
           "${modifier}+Shift+c" = "reload";
-          "${modifier}+Shift+e" =
-            "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'";
+          "${modifier}+Shift+e" = "exec exit sway";
 
           "${modifier}+r" = "mode resize";
           "${modifier}+z" = "exec swaylock " +
