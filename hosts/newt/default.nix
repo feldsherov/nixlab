@@ -70,16 +70,6 @@
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
 
-  # Enable hyprland.
-  programs.hyprland = {
-    # Install the packages from nixpkgs
-    enable = true;
-    # Whether to enable XWayland
-    xwayland.enable = true;
-  };
-
-  programs.waybar.enable = true;
-
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -124,7 +114,7 @@
   # Enable flakes.
   # https://nix-community.github.io/home-manager/index.xhtml#ch-nix-flakes
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
     extraOptions = ''
        experimental-features = nix-command flakes
     '';
