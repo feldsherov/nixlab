@@ -84,6 +84,16 @@
     #jack.enable = true;
   };
 
+
+  # Use Ozon platform abstruction layer in Chrome.
+  # Fixes blury VsCode issue for me.
+  # https://www.reddit.com/r/hyprland/comments/1828qts/waybar_workspaces_on_nixos_and_blurry_vscode/
+  # This semantically belongs to Sway module under feldsherov.nix, but
+  # I failed to set enviroment variable from Sway from Home Manger context.
+  environment.variables = {
+    NIXOS_OZONE_WL = "1";
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
