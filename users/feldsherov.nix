@@ -31,6 +31,7 @@ in {
     gimp
     tex
     dejavu_fonts
+    xdg-utils
   ];
 
   fonts.fontconfig.enable = true;
