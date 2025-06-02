@@ -50,7 +50,7 @@
   users.users.feldsherov = {
     isNormalUser = true;
     description = "Svyatoslav Feldsherov";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
     ];
   };
@@ -69,6 +69,7 @@
     python3
     bison
     pavucontrol
+    docker
   ];
 
   # Set vim as default editor.
@@ -83,6 +84,10 @@
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
+  };
+
+  virtualisation.docker = {
+    enable = true;
   };
 
 
