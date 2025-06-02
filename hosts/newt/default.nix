@@ -68,6 +68,7 @@
     flex
     python3
     bison
+    pavucontrol
   ];
 
   # Set vim as default editor.
