@@ -71,6 +71,7 @@
     pavucontrol
     docker
     wireshark
+    vlc
   ];
 
   # Set vim as default editor.
