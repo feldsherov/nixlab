@@ -24,6 +24,7 @@ in {
 
   imports = [
     ../modules/sway/default.nix
+    ../modules/vim/default.nix
   ];
 
   home.packages = with pkgs; [
@@ -41,8 +42,15 @@ in {
 
   programs.git = {
     enable = true;
+    extraConfig = {
+      core.editor = "nvim";
+    };
     userName  = "Svyatoslav Feldsherov";
     userEmail = "svyat@feldsherov.name";
+  };
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
   };
 }
 

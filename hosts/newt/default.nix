@@ -74,9 +74,6 @@
     vlc
   ];
 
-  # Set vim as default editor.
-  programs.vim.enable = true;
-  programs.vim.defaultEditor = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
