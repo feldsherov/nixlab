@@ -8,7 +8,7 @@
 	menu = "${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
         input = {
            "type:keyboard" = {
-             xkb_layout = "us,ru";
+             xkb_layout = "us,ru,il";
              xkb_options = "grp:win_space_toggle,caps:swapescape";
            };
            "type:touchpad" = {

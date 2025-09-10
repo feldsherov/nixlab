@@ -33,6 +33,7 @@ in {
     tex
     dejavu_fonts
     xdg-utils
+    jq
   ];
 
   fonts.fontconfig.enable = true;
