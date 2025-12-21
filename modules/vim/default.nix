@@ -22,5 +22,8 @@
       nerdtree
       vim-airline
     ];
+
+    viAlias = true;
+    vimAlias = true;
   };
 }
