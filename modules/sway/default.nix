@@ -5,18 +5,20 @@
       config = rec {
         modifier = "Mod4";
         terminal = "foot"; 
-	menu = "${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
+      	menu = ''
+          bemenu-run --tf '#ff9900' --hf '#ff9900' --ignorecase --list 10 --prompt "$:" 
+        '';
         input = {
            "type:keyboard" = {
-             xkb_layout = "us,ru,il";
-             xkb_options = "grp:win_space_toggle,caps:swapescape";
+            xkb_layout = "us,ru,il";
+            xkb_options = "grp:win_space_toggle,caps:swapescape";
            };
            "type:touchpad" = {
-  	   natural_scroll = "enabled";
+  	        natural_scroll = "enabled";
            };
         };
         left = "h";
-	right = "l";
+        right = "l";
         down = "j";
         up = "k";
         keybindings = {
@@ -149,8 +151,8 @@
 
   home.packages = with pkgs; [
     i3status
+    bemenu
     swaylock-effects
-    sway
     grim
     slurp
     wl-clipboard
