@@ -21,6 +21,7 @@
 
   home.packages = with pkgs; [
     vscode
+    file
     gimp
     dejavu_fonts
     xdg-utils
