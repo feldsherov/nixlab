@@ -1,14 +1,6 @@
 { config, pkgs, ... }:
 
-let
-  tex = (pkgs.texlive.combine {
-    inherit (pkgs.texlive) scheme-full
-      dvisvgm dvipng # for preview and export as html
-      wrapfig amsmath ulem hyperref capt-of;
-      #(setq org-latex-compiler "lualatex")
-      #(setq org-preview-latex-default-process 'dvisvgm)
-  });
-in {
+{
   home.username = "feldsherov";
   home.homeDirectory = "/home/feldsherov";
 
@@ -30,7 +22,6 @@ in {
   home.packages = with pkgs; [
     vscode
     gimp
-    tex
     dejavu_fonts
     xdg-utils
     jq
@@ -45,11 +36,13 @@ in {
 
   programs.git = {
     enable = true;
-    extraConfig = {
+    settings = {
+      user = {
+        name  = "Svyatoslav Feldsherov";
+        email = "svyat@feldsherov.name";
+      };
       core.editor = "nvim";
     };
-    userName  = "Svyatoslav Feldsherov";
-    userEmail = "svyat@feldsherov.name";
   };
 
   home.sessionVariables = {
