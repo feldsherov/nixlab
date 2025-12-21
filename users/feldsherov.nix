@@ -34,6 +34,8 @@ in {
     dejavu_fonts
     xdg-utils
     jq
+    nodejs
+    tmux
   ];
 
   fonts.fontconfig.enable = true;
