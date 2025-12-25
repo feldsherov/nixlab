@@ -28,6 +28,7 @@
     jq
     nodejs
     tmux
+    mpv
   ];
 
   fonts.fontconfig.enable = true;
