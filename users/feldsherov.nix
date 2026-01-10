@@ -32,6 +32,7 @@
     traceroute
     mtr
     dig
+    thunderbird
   ];
 
   fonts.fontconfig.enable = true;
