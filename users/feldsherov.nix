@@ -29,6 +29,9 @@
     nodejs
     tmux
     mpv
+    traceroute
+    mtr
+    dig
   ];
 
   fonts.fontconfig.enable = true;
