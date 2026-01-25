@@ -27,7 +27,6 @@
     xdg-utils
     jq
     nodejs
-    tmux
     mpv
     traceroute
     mtr
@@ -49,6 +48,11 @@
       };
       core.editor = "nvim";
     };
+  };
+
+  programs.tmux = {
+    enable = true;
+    baseIndex = 1;
   };
 
   home.sessionVariables = {
