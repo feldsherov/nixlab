@@ -4,7 +4,7 @@
       enable = true;
       config = rec {
         modifier = "Mod4";
-        terminal = "foot"; 
+        terminal = "kitty"; 
       	menu = ''
           bemenu-run --tf '#ff9900' --hf '#ff9900' --ignorecase --list 10 --prompt "$:" 
         '';
@@ -156,6 +156,6 @@
     grim
     slurp
     wl-clipboard
-    foot
+    kitty
   ];
 }
