@@ -33,6 +33,7 @@
     dig
     thunderbird
     containerlab
+    yq
   ];
 
   fonts.fontconfig.enable = true;
