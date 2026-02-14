@@ -32,6 +32,7 @@
     mtr
     dig
     thunderbird
+    containerlab
   ];
 
   fonts.fontconfig.enable = true;
