@@ -22,7 +22,6 @@
     ../modules/sway/default.nix
   ];
 
-  fonts.fontconfig.enable = pkgs.stdenv.isLinux;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -41,6 +40,26 @@
   programs.tmux = {
     enable = true;
     baseIndex = 1;
+  };
+
+  programs.zsh = {
+    enable = true;
+    oh-my-zsh = {
+      enable = true;
+      theme = "minimal";
+    };
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.kitty = {
+    enable = true;
+    font = {
+      name = "MesloLGS NF";
+    };
   };
 
   home.sessionVariables = {

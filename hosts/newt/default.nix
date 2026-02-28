@@ -18,6 +18,10 @@
   boot.crashDump.enable = true;
 
 
+  fonts.packages = with pkgs; [
+    meslo-lgs-nf
+  ];
+
   networking.hostName = "newt"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -46,14 +50,18 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with 'passwd'.
   users.users.feldsherov = {
     isNormalUser = true;
     description = "Svyatoslav Feldsherov";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     ];
   };
+
+  # Enable zsh system-wide (required for it to be a valid login shell)
+  programs.zsh.enable = true;
 
 
   # Allow unfree packages

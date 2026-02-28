@@ -12,7 +12,7 @@
     mpv
     vscode
     thunderbird
-    dejavu_fonts
+    nerd-fonts.jetbrains-mono
   ] ++ lib.optionals stdenv.isLinux [
     # Linux-only packages
     gimp

@@ -157,6 +157,5 @@ lib.mkIf pkgs.stdenv.isLinux {
     grim
     slurp
     wl-clipboard
-    kitty
   ];
 }
