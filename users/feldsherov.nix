@@ -1,8 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.username = "feldsherov";
-  home.homeDirectory = "/home/feldsherov";
+  home.homeDirectory =
+    if pkgs.stdenv.isDarwin
+    then "/Users/feldsherov"
+    else "/home/feldsherov";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -15,28 +18,11 @@
   home.stateVersion = "24.05";
 
   imports = [
-    ../modules/sway/default.nix
     ../modules/vim/default.nix
+    ../modules/sway/default.nix
   ];
 
-  home.packages = with pkgs; [
-    vscode
-    file
-    gimp
-    dejavu_fonts
-    xdg-utils
-    jq
-    nodejs
-    mpv
-    traceroute
-    mtr
-    dig
-    thunderbird
-    containerlab
-    yq
-  ];
-
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig.enable = pkgs.stdenv.isLinux;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

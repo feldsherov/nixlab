@@ -1,12 +1,13 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, lib, ... }:
+
+lib.mkIf pkgs.stdenv.isLinux {
   wayland.windowManager.sway = {
       enable = true;
       config = rec {
         modifier = "Mod4";
-        terminal = "kitty"; 
+        terminal = "kitty";
       	menu = ''
-          bemenu-run --tf '#ff9900' --hf '#ff9900' --ignorecase --list 10 --prompt "$:" 
+          bemenu-run --tf '#ff9900' --hf '#ff9900' --ignorecase --list 10 --prompt "$:"
         '';
         input = {
            "type:keyboard" = {
@@ -101,8 +102,8 @@
              " --ring-color 00ff88 --key-hl-color 880033" +
              " --line-color 00000000 --inside-color 00000088" +
              " --separator-color 00000000 --grace 2 --fade-in 0.2";
-        }; 
-      
+        };
+
       bars = [{
         mode = "dock";
         hiddenState = "hide";
