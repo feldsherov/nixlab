@@ -110,7 +110,7 @@ lib.mkIf pkgs.stdenv.isLinux {
         position = "top";
         workspaceButtons = true;
         workspaceNumbers = true;
-        statusCommand = "${pkgs.i3status}/bin/i3status";
+        statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-default.toml";
         fonts = {
           names = [ "monospace" ];
           size = 8.0;
@@ -150,8 +150,55 @@ lib.mkIf pkgs.stdenv.isLinux {
     };
   };
 
+  programs.i3status-rust = {
+    enable = true;
+    bars = {
+      default = {
+        blocks = [
+          {
+            block = "keyboard_layout";
+            driver = "sway";
+            mappings = {
+              "English (US)" = "US";
+              "Russian" = "RU";
+              "Hebrew" = "IL";
+            };
+          }
+          {
+            block = "net";
+            format = " $ssid $signal_strength $ip ";
+          }
+          {
+            block = "cpu";
+            interval = 5;
+            format = " CPU $utilization ";
+          }
+          {
+            block = "memory";
+            format = " MEM $mem_used_percents ";
+          }
+          {
+            block = "battery";
+            format = " BAT $percentage ";
+          }
+          {
+            block = "time";
+            interval = 60;
+            format = " $timestamp.datetime(f:'%a %d/%m %R') ";
+          }
+        ];
+        settings = {
+          theme = {
+            theme = "plain";
+          };
+        };
+        icons = "none";
+      };
+    };
+  };
+
   home.packages = with pkgs; [
-    i3status
+    i3status-rust
     bemenu
     swaylock-effects
     grim

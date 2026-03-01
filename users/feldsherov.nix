@@ -40,6 +40,10 @@
   programs.tmux = {
     enable = true;
     baseIndex = 1;
+    extraConfig = ''
+      set -s extended-keys on
+      set -as terminal-features 'xterm*:extkeys'
+    '';
   };
 
   programs.zsh = {
