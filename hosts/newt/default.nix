@@ -80,6 +80,7 @@
     docker
     wireshark
     vlc
+    zoom
   ];
 
   programs.steam = {
@@ -131,6 +132,25 @@
   hardware.graphics.enable = true;
 
   services.gnome.gnome-keyring.enable=true;
+
+  # Host-specific Home Manager settings
+  home-manager.users.feldsherov = {
+    xdg.mimeApps = {
+      enable = true;
+      defaultApplications = {
+        # PDF
+        "application/pdf" = "firefox.desktop";
+        # Images
+        "image/jpeg" = "firefox.desktop";
+        "image/png" = "firefox.desktop";
+        "image/gif" = "firefox.desktop";
+        "image/webp" = "firefox.desktop";
+        "image/bmp" = "firefox.desktop";
+        "image/svg+xml" = "firefox.desktop";
+        "image/tiff" = "firefox.desktop";
+      };
+    };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
