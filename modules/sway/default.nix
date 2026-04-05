@@ -204,5 +204,12 @@ lib.mkIf pkgs.stdenv.isLinux {
     grim
     slurp
     wl-clipboard
+    mako        # notification daemon
+    libnotify   # notify-send command
   ];
+
+  services.mako = {
+    enable = true;
+    settings.default-timeout = 10000;  # 10 seconds
+  };
 }

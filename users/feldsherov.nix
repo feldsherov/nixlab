@@ -77,5 +77,14 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
+
+  services.batsignal = {
+    enable = true;
+    extraArgs = [
+      "-w" "20"   # warning at 20%
+      "-c" "10"   # critical at 10%
+      "-d" "5"    # danger at 5%
+    ];
+  };
 }
 
