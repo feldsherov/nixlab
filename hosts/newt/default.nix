@@ -137,6 +137,7 @@
   services.gnome.gnome-keyring.enable=true;
 
   # Host-specific Home Manager settings
+  home-manager.backupFileExtension = "backup";
   home-manager.users.feldsherov = {
     imports = [
       ../../modules/sway/default.nix
@@ -146,6 +147,34 @@
       enable = true;
       font = {
         name = "MesloLGS NF";
+      };
+      settings = {
+        # Hipster Green color scheme
+        background = "#100b05";
+        foreground = "#84c138";
+        cursor = "#23ff18";
+        selection_background = "#083905";
+        selection_foreground = "#ffffff";
+
+        # Normal colors
+        color0 = "#000000";
+        color1 = "#b6214a";
+        color2 = "#00a600";
+        color3 = "#bfbf00";
+        color4 = "#246eb2";
+        color5 = "#b200b2";
+        color6 = "#00a6b2";
+        color7 = "#bfbfbf";
+
+        # Bright colors
+        color8 = "#666666";
+        color9 = "#e50000";
+        color10 = "#86a93e";
+        color11 = "#e5e500";
+        color12 = "#0000ff";
+        color13 = "#e500e5";
+        color14 = "#00e5e5";
+        color15 = "#e5e5e5";
       };
       extraConfig = ''
         # Send CSI u sequence for Shift+Enter so tmux can recognize it

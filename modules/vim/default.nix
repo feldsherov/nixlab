@@ -12,6 +12,10 @@
       set expandtab
 
       syntax on
+
+      " Use terminal colors (16-color palette from kitty/iTerm)
+      set notermguicolors
+      colorscheme default
       
       " Show whitespace characters.
       set listchars=eol:↵,trail:~,tab:>-,nbsp:+,eol:$
