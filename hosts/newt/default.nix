@@ -81,6 +81,8 @@
     wireshark
     vlc
     zoom
+    openssl
+    openssl.dev
   ];
 
   programs.steam = {
@@ -135,6 +137,15 @@
 
   # Host-specific Home Manager settings
   home-manager.users.feldsherov = {
+    services.batsignal = {
+      enable = true;
+      extraArgs = [
+        "-w" "20"   # warning at 20%
+        "-c" "10"   # critical at 10%
+        "-d" "5"    # danger at 5%
+      ];
+    };
+
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {

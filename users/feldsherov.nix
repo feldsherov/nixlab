@@ -19,6 +19,8 @@
 
   imports = [
     ../modules/vim/default.nix
+    ../modules/tmux/default.nix
+    ../modules/zsh/default.nix
     ../modules/sway/default.nix
   ];
 
@@ -37,32 +39,6 @@
     };
   };
 
-  programs.tmux = {
-    enable = true;
-    baseIndex = 1;
-    terminal = "tmux-256color";
-    extraConfig = ''
-      set -s extended-keys always
-      set -as terminal-features 'xterm*:extkeys'
-
-      # Shift+Enter sends Escape+Enter for multiline input in apps like Claude Code
-      bind -n S-Enter send-keys Escape Enter
-    '';
-  };
-
-  programs.zsh = {
-    enable = true;
-    oh-my-zsh = {
-      enable = true;
-      theme = "minimal";
-    };
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
   programs.kitty = {
     enable = true;
     font = {
@@ -78,13 +54,5 @@
     EDITOR = "nvim";
   };
 
-  services.batsignal = {
-    enable = true;
-    extraArgs = [
-      "-w" "20"   # warning at 20%
-      "-c" "10"   # critical at 10%
-      "-d" "5"    # danger at 5%
-    ];
-  };
 }
 
