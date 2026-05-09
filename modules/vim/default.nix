@@ -21,6 +21,7 @@
       vim-nix
       nerdtree
       vim-airline
+      vim-tmux-navigator
     ];
 
     viAlias = true;
