@@ -137,6 +137,21 @@
 
   # Host-specific Home Manager settings
   home-manager.users.feldsherov = {
+    imports = [
+      ../../modules/sway/default.nix
+    ];
+
+    programs.kitty = {
+      enable = true;
+      font = {
+        name = "MesloLGS NF";
+      };
+      extraConfig = ''
+        # Send CSI u sequence for Shift+Enter so tmux can recognize it
+        map shift+enter send_text all \x1b[13;2u
+      '';
+    };
+
     services.batsignal = {
       enable = true;
       extraArgs = [

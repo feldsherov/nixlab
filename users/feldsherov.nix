@@ -21,7 +21,6 @@
     ../modules/vim/default.nix
     ../modules/tmux/default.nix
     ../modules/zsh/default.nix
-    ../modules/sway/default.nix
   ];
 
 
@@ -37,17 +36,6 @@
       };
       core.editor = "nvim";
     };
-  };
-
-  programs.kitty = {
-    enable = true;
-    font = {
-      name = "MesloLGS NF";
-    };
-    extraConfig = ''
-      # Send CSI u sequence for Shift+Enter so tmux can recognize it
-      map shift+enter send_text all \x1b[13;2u
-    '';
   };
 
   home.sessionVariables = {
