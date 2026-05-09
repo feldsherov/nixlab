@@ -21,6 +21,7 @@
     ../modules/vim/default.nix
     ../modules/tmux/default.nix
     ../modules/zsh/default.nix
+    ../modules/claude/default.nix
   ];
 
 

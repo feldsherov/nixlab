@@ -12,7 +12,7 @@ lib.mkIf pkgs.stdenv.isLinux {
         input = {
            "type:keyboard" = {
             xkb_layout = "us,ru,il";
-            xkb_options = "grp:win_space_toggle,caps:swapescape";
+            xkb_options = "grp:win_space_toggle";
            };
            "type:touchpad" = {
   	        natural_scroll = "enabled";

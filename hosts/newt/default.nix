@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/misc-packages/default.nix
+    ../../modules/keyd/default.nix
   ];
 
   # Bootloader.
