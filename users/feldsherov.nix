@@ -22,6 +22,7 @@
     ../modules/tmux/default.nix
     ../modules/zsh/default.nix
     ../modules/claude/default.nix
+    ../modules/ssh/default.nix
   ];
 
 
