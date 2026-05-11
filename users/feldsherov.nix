@@ -23,6 +23,7 @@
     ../modules/zsh/default.nix
     ../modules/claude/default.nix
     ../modules/ssh/default.nix
+    ../modules/kubectl/default.nix
   ];
 
 
