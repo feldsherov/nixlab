@@ -5,6 +5,7 @@
   modules = [
     ../../users/feldsherov.nix
     ../../modules/iterm2/default.nix
+    ./pplx.nix
     # Re-prepend in initContent (not home.sessionPath) because macOS
     # /etc/zprofile runs path_helper after zshenv and rebuilds PATH.
     {
