@@ -18,7 +18,7 @@
     # which rebuilds PATH from /etc/paths{,.d} and drops nix entries.
     # nix-daemon.sh's idempotency guard prevents re-sourcing, so set PATH directly.
     initContent = ''
-      export PATH="/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:$PATH"
+      export PATH="/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:$HOME/.cargo/bin:$PATH"
     '';
   };
 
