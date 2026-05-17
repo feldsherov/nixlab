@@ -5,9 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    claude-code.url = "github:sadjow/claude-code-nix";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, claude-code, ... }:
     let
       homeManagerHosts = [ "skink" ];
     in {
@@ -18,6 +19,7 @@
             ./hosts/newt/default.nix
             home-manager.nixosModules.home-manager
             {
+              nixpkgs.overlays = [ claude-code.overlays.default ];
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.feldsherov = import ./users/feldsherov.nix;
