@@ -16,6 +16,9 @@
       " Use terminal colors (16-color palette from kitty/iTerm)
       set notermguicolors
       colorscheme default
+
+      " Enable powerline fonts for airline
+      let g:airline_powerline_fonts = 1
       
       " Show whitespace characters.
       set listchars=eol:↵,trail:~,tab:>-,nbsp:+,eol:$

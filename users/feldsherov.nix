@@ -41,6 +41,10 @@
     };
   };
 
+  programs.gh = {
+    enable = true;
+  };
+
   home.sessionVariables = {
     EDITOR = "nvim";
   };

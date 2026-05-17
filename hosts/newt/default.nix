@@ -21,6 +21,7 @@
 
   fonts.packages = with pkgs; [
     meslo-lgs-nf
+    noto-fonts-color-emoji
   ];
 
   networking.hostName = "newt"; # Define your hostname.
@@ -70,7 +71,6 @@
 
   # System wide packages
   environment.systemPackages = with pkgs; [
-    vim 
     firefox
     git
     htop
@@ -84,6 +84,7 @@
     zoom
     openssl
     openssl.dev
+    claude-code
   ];
 
   programs.steam = {
@@ -149,6 +150,9 @@
         name = "MesloLGS NF";
       };
       settings = {
+        # Emoji font fallback
+        symbol_map = "U+1F600-U+1F64F,U+1F300-U+1F5FF,U+1F680-U+1F6FF,U+1F1E0-U+1F1FF,U+2600-U+26FF,U+2700-U+27BF,U+FE00-U+FE0F,U+1F900-U+1F9FF Noto Color Emoji";
+
         # Hipster Green color scheme
         background = "#100b05";
         foreground = "#84c138";
