@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ../../modules/misc-packages/default.nix
     ../../modules/keyd/default.nix
+    ../../modules/secure-boot/default.nix
   ];
 
   # Bootloader.

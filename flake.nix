@@ -6,9 +6,13 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     claude-code.url = "github:sadjow/claude-code-nix";
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, claude-code, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, claude-code, lanzaboote, ... }:
     let
       homeManagerHosts = [ "skink" ];
     in {
@@ -17,6 +21,7 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/newt/default.nix
+            lanzaboote.nixosModules.lanzaboote
             home-manager.nixosModules.home-manager
             {
               nixpkgs.overlays = [ claude-code.overlays.default ];
