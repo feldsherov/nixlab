@@ -3,6 +3,9 @@
   programs.neovim = {
     enable = true;
     extraConfig = ''
+      " Disable mouse in all modes
+      set mouse=
+
       " Show line numbers
       set number
       
