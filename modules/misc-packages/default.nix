@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Common packages (all platforms)
+    unzip
     file
     jq
     nodejs
