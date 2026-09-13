@@ -143,6 +143,7 @@
   home-manager.users.feldsherov = {
     imports = [
       ../../modules/sway/default.nix
+      ../../modules/dropbox.nix
     ];
 
     programs.kitty = {
@@ -195,11 +196,6 @@
         "-d" "5"    # danger at 5%
       ];
     };
-
-    # Dropbox sync daemon (systemd user service). Syncs to ~/Dropbox.
-    # First launch requires interactive account linking: watch the URL in
-    # `journalctl --user -u dropbox -f` and open it while logged in.
-    services.dropbox.enable = true;
 
     xdg.mimeApps = {
       enable = true;
