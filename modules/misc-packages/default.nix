@@ -20,6 +20,7 @@
     xdg-utils
     mtr
     containerlab
+    dropbox-cli
   ] ++ lib.optionals stdenv.isDarwin [
     # macOS-specific packages
   ];

@@ -196,6 +196,11 @@
       ];
     };
 
+    # Dropbox sync daemon (systemd user service). Syncs to ~/Dropbox.
+    # First launch requires interactive account linking: watch the URL in
+    # `journalctl --user -u dropbox -f` and open it while logged in.
+    services.dropbox.enable = true;
+
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {

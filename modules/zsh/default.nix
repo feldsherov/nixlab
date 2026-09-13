@@ -7,6 +7,12 @@
       enable = true;
       theme = "minimal";
     };
+    # The Home Manager `services.dropbox` daemon runs with HOME=~/.dropbox-hm,
+    # so its control socket lives there. The dropbox CLI otherwise looks under
+    # the real $HOME and reports "Dropbox isn't running!". Point it at the daemon.
+    shellAliases = {
+      dropbox = "HOME=~/.dropbox-hm dropbox";
+    };
     # Cover non-login shells (scripts, nested zsh): /etc/zprofile is not run,
     # so path_helper never clobbers PATH and sourcing nix-daemon.sh suffices.
     envExtra = ''
