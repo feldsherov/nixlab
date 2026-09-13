@@ -118,17 +118,6 @@
   # I failed to set enviroment variable from Sway from Home Manger context.
   environment.variables = {
     NIXOS_OZONE_WL = "1";
-
-    # Firefox Developer Edition (see modules/firefox) uses the "dedicated
-    # profile per install" feature, which tries to write an [Install<hash>]
-    # section into profiles.ini. Home Manager symlinks profiles.ini read-only
-    # into the Nix store, so that write fails and Firefox reports
-    # "Your Firefox profile cannot be loaded" (e.g. when launched via
-    # xdg-open from a terminal link). Setting this makes Firefox honor the
-    # declarative Default=1 profile ("dev") instead.
-    # Belongs with the firefox Home Manager module, but GUI env vars have to
-    # be set system-wide (same reason as NIXOS_OZONE_WL above).
-    MOZ_LEGACY_PROFILES = "1";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -210,6 +199,12 @@
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {
+        # Web browser and image/PDF viewer.
+        "text/html" = "firefox.desktop";
+        "x-scheme-handler/http" = "firefox.desktop";
+        "x-scheme-handler/https" = "firefox.desktop";
+        "x-scheme-handler/about" = "firefox.desktop";
+        "x-scheme-handler/unknown" = "firefox.desktop";
         # PDF
         "application/pdf" = "firefox.desktop";
         # Images
